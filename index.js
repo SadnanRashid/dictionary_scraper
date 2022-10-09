@@ -2,7 +2,6 @@ const request = require("request");
 const cheerio = require("cheerio");
 
 module.exports = function getInfos(title) {
-  console.log("yes");
   request(
     `https://www.dictionary.com/browse/${title}`,
     (error, response, html) => {
