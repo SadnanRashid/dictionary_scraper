@@ -36,4 +36,8 @@ function getInfos(title) {
   );
 }
 
-module.exports = { getInfos };
+function sh() {
+  return "hello";
+}
+
+module.exports = { getInfos, sh };

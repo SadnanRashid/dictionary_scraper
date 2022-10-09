@@ -11,5 +11,6 @@ app.listen(4000, () => {
 app.get("/dictionary/get-info", (req, res) => {
   let title = req.query.title;
   const result = get.getInfos("dead");
-  res.send(result);
+  console.log(result);
+  res.send(get.getInfos("dead"));
 });
