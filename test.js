@@ -1,7 +1,7 @@
 const request = require("request");
 const cheerio = require("cheerio");
 
-function getInfos(title) {
+async function getInfos(title) {
   request(
     `https://www.dictionary.com/browse/${title}`,
     (error, response, html) => {
@@ -34,6 +34,7 @@ function getInfos(title) {
       }
     }
   );
+  return "hasjidhask";
 }
 
 function sh() {

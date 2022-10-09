@@ -8,9 +8,9 @@ app.listen(4000, () => {
   console.log("Server Works !!! At port 4000");
 });
 
-app.get("/dictionary/get-info", (req, res) => {
+app.get("/dictionary/get-info", async (req, res) => {
   let title = req.query.title;
-  const result = get.getInfos("dead");
-  console.log(result);
-  res.send(get.getInfos("dead"));
+  const result = await get.getInfos("dead");
+  console.log(await get.getInfos("dead"));
+  res.send(get.sh());
 });
